@@ -1,6 +1,8 @@
 // import the login component first (actually all components here, but we're starting with login)
 import LoginComponent from "./components/LoginComponent.js"
-import UsersComponent from "./components/UsersComponent.js";
+import UsersComponent from "./components/UsersComponent.js"
+import ItemComponent from "./components/ItemComponent.js"
+import MoviesComponent from "./components/MoviesComponent.js";
 
 (() => {
   let router = new VueRouter({
@@ -8,13 +10,16 @@ import UsersComponent from "./components/UsersComponent.js";
     routes: [
       { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
-      { path: './users', name: "users", component: UsersComponent }
+      { path: '/users', name: "users", component: UsersComponent },
+      { path: '/item_menu', name: "item_menu", component: ItemComponent },
+      { path: '/movies', name: "movies", component: MoviesComponent }
     ]
   });
 
   const vm = new Vue({
 
     data: {
+
       authenticated: false,
       administrator: false,
 
@@ -23,7 +28,9 @@ import UsersComponent from "./components/UsersComponent.js";
         password: "password"
       },
 
-      user: [],
+      movies: [],
+
+      user: []
 
       //currentUser: {},
     },
@@ -36,6 +43,22 @@ import UsersComponent from "./components/UsersComponent.js";
     },
 
     methods: {
+
+      getMovieData() {
+        // do a fetch call here and get the user from the DB
+        const url = './includes/index.php?getMovie=1';
+  
+        fetch(url) // get data from the DB
+        .then(res => res.json()) // translate JSON to plain object
+        .then(data => { // use the plain data object (the user)
+          console.log(data); // log it to the console (testing)
+  
+          // put our DB data into Vue
+          this.movies.settings = data[0];
+        })
+        .catch((error) => console.error(error))
+      },
+
       setAuthenticated(status, data) {
         this.authenticated = status;
         // handle implicit type coercion (bad, bad part of JS)
