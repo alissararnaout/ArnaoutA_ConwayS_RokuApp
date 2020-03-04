@@ -1,6 +1,18 @@
 <?php
     require('connect.php');
 
+    function getMovies($conn) {
+        $movie_query = 'SELECT * FROM tbl_movies';
+        $getMovieData = $conn->query($movie_query);
+    
+        $result = array();
+        while ($row = $getMovieData->fetch(PDO::FETCH_ASSOC)) {
+            $result[] = $row;
+        }
+    
+        return $result;
+    }
+
     function getUser($conn) {
         // validate that the post method is working from our js file 
 
