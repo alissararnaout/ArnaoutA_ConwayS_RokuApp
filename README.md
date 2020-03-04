@@ -50,3 +50,7 @@ Then make the site live with localhost
 * Trevor.
 * Adobe Fonts
 
+## Liscence
+
+MIT
+
