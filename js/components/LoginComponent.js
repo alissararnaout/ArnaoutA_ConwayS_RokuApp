@@ -1,16 +1,18 @@
 export default {
     template: `
         <div class="container">
-            <div class="jumbotron roku-jumbotron">
-                <h1 class="display-4">Welcome to Flashback!</h1>
-                <p class="lead">Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.</p>
+            <div class="jumbotron roku-jumbotron" id="loginBox">
+                <h1 class="display-4">Welcome to <span id="fback">Flashback</span>.</h1>
+                <p class="lead">
+                Watch and listen to all your favourite
+                oldies right here.</p>
                 <hr class="my-4">
 
                 <form @submit.prevent="login">
                     <div class="form-row align-items-center">
                         <div class="col-md-3 my-1">
                             <label class="sr-only" for="inlineFormInputName">Name</label>
-                            <input v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
+                            <input class="unamef" v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
                         </div>
 
                         <div class="col-md-3 my-1">

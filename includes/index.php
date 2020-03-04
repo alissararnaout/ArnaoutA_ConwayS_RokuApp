@@ -7,6 +7,7 @@
         echo json_encode($users);
     }
 
+    
 
     if (isset($_GET['user'])) {
         $user = getUser($pdo);

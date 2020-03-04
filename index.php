@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/vys4eft.css">
+
+
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
     integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
@@ -24,7 +27,7 @@
     <div class="container-fluid">
       <div class="row">
         <header class="col-sm-12 fixed-top">
-          <img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
+          <img class="rokuLogo" src="images/roku.svg" alt="Roku logo" width="90"><span id="flashback">FlashBack</span>
           <nav class="float-right">
             <ul>
               <!-- <li>Kids</li> -->
