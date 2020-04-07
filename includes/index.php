@@ -20,6 +20,19 @@
         echo json_encode($movies);
     }
 
+    if(isset($_GET["getTv"])) {
+        $tv = getTv($pdo);
+    
+        echo json_encode($tv);
+    }
+
+    if(isset($_GET["getAudio"])) {
+        $audio = getAudio($pdo);
+    
+        echo json_encode($audio);
+    }
+
+
   
 
    

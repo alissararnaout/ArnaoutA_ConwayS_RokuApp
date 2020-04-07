@@ -13,6 +13,30 @@
         return $result;
     }
 
+    function getTv($conn) {
+        $tv_query = 'SELECT * FROM tbl_tv';
+        $getTvData = $conn->query($tv_query);
+    
+        $result = array();
+        while ($row = $getTvData->fetch(PDO::FETCH_ASSOC)) {
+            $result[] = $row;
+        }
+    
+        return $result;
+    }
+
+    function getAudio($conn) {
+        $audio_query = 'SELECT * FROM tbl_music';
+        $getAudioData = $conn->query($audio_query);
+    
+        $result = array();
+        while ($row = $getAudioData->fetch(PDO::FETCH_ASSOC)) {
+            $result[] = $row;
+        }
+    
+        return $result;
+    }
+
     function getUser($conn) {
         // validate that the post method is working from our js file 
 
