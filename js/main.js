@@ -3,6 +3,8 @@ import LoginComponent from "./components/LoginComponent.js"
 import UsersComponent from "./components/UsersComponent.js"
 import ItemComponent from "./components/ItemComponent.js"
 import MoviesComponent from "./components/MoviesComponent.js";
+import TvsComponent from "./components/TvsComponent.js";
+import AudiosComponent from "./components/AudiosComponent.js";
 
 (() => {
   let router = new VueRouter({
@@ -12,7 +14,9 @@ import MoviesComponent from "./components/MoviesComponent.js";
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: "users", component: UsersComponent },
       { path: '/item_menu', name: "item_menu", component: ItemComponent },
-      { path: '/movies', name: "movies", component: MoviesComponent }
+      { path: '/movies', name: "movies", component: MoviesComponent },
+      { path: '/tv', name: "tv", component: TvsComponent },
+      { path: '/audio', name: "audio", component: AudiosComponent }
     ]
   });
 
@@ -27,6 +31,10 @@ import MoviesComponent from "./components/MoviesComponent.js";
         username: "user",
         password: "password"
       },
+
+      audio: [],
+
+      tv: [],
 
       movies: [],
 
@@ -55,6 +63,36 @@ import MoviesComponent from "./components/MoviesComponent.js";
   
           // put our DB data into Vue
           this.movies.settings = data[0];
+        })
+        .catch((error) => console.error(error))
+      },
+
+      getTvData() {
+        // do a fetch call here and get the user from the DB
+        const url = './includes/index.php?getTv=1';
+  
+        fetch(url) // get data from the DB
+        .then(res => res.json()) // translate JSON to plain object
+        .then(data => { // use the plain data object (the user)
+          console.log(data); // log it to the console (testing)
+  
+          // put our DB data into Vue
+          this.tv.settings = data[0];
+        })
+        .catch((error) => console.error(error))
+      },
+
+      getAudioData() {
+        // do a fetch call here and get the user from the DB
+        const url = './includes/index.php?getAudio=1';
+  
+        fetch(url) // get data from the DB
+        .then(res => res.json()) // translate JSON to plain object
+        .then(data => { // use the plain data object (the user)
+          console.log(data); // log it to the console (testing)
+  
+          // put our DB data into Vue
+          this.audio.settings = data[0];
         })
         .catch((error) => console.error(error))
       },

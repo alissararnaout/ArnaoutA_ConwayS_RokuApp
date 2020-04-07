@@ -45,9 +45,7 @@
   </main>
 
   <footer>
-    <p class="copy">
-      &copy; 2018 The Awesome Company, Inc
-    </p>
+   
 
     <ul class="float-right">
       <li><i class="fab fa-facebook"></i></li>

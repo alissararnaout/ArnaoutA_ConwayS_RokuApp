@@ -9,7 +9,7 @@ export default {
                 <h2>Movies</h2>
                 </router-link>
 
-                <router-link to=/music>
+                <router-link to=/audio>
                 <h2>Music</h2>
                 </router-link>
 

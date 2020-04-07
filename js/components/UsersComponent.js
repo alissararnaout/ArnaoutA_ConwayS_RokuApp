@@ -8,15 +8,18 @@ export default {
                      <h1 class="user-message"> {{ message }} </h1>
 
                         <!-- render our users here -->
-                <user v-for="user in userList" :liveuser="user"></user>
+                <img src="images/profile_parent.png" alt="parent">
+                <img src="images/profile_child.png" alt="child">
+                <user class="userlist" v-for="user in userList" :liveuser="user"></user>
                 </div>
+                <button id="profset">Profile Settings</button>
             </div>
         </div>
     `,
 
     data: function(){
         return{
-            message: "who dis",
+            message: "Who's Watching?",
             userList: []
         }
     },
