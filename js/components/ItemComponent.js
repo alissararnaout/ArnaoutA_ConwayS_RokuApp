@@ -1,11 +1,14 @@
 
 
 export default {
+    props: ['currentuser'],
     template: `
         <div class="container">
-            <div class="row">
+        <h1 id="hello">Hello, {{ currentuser.uname }}</h1>
         
-                <router-link to=/movies>
+            <div class="row">
+
+                <router-link to=/video>
                 <h2>Movies</h2>
                 </router-link>
 
