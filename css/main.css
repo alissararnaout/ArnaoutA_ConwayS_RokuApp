@@ -17,46 +17,10 @@ body {
   background: url(../images/bckgrnd.png) repeat;
 }
 
-#flashback {
-  font-family: rajdhani, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #f23d3d;
-  font-size: 35px;
-  float: left;
-  padding: 0;
-}
-
-#fback {
-  font-family: rajdhani, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #f23d3d;
-  font-size: 40px;
-}
-
-.lead {
-  font-family: rajdhani, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-left: 93px;
-  width: 350px;
-  color: #feedd0;
-}
-
 .rokuLogo {
   fill: black;
   float: left;
   margin-top: 10px;
-}
-
-#loginBox {
-  margin-top: 120px;
-  background-color: #2b2925;
-}
-
-.unamef {
-  background-color: #feedd0;
 }
 
 a {
@@ -75,6 +39,10 @@ a {
 
 #users {
   background-color: green;
+}
+
+#header {
+  background-color: #feedd0;
 }
 
 header {
@@ -118,6 +86,7 @@ nav:not(.side-nav) ul li {
   font-size: 1.75em;
   padding: 0 0.2em;
   cursor: pointer;
+  z-index: 1;
 }
 
 .toast {
@@ -178,15 +147,44 @@ nav:not(.side-nav) ul li {
 
 .card {
   cursor: pointer;
-  color: white;
-  background: #6C3C97;
-  border: 4px solid #522d73;
+  color: black;
+  background: #feedd0;
   margin-bottom: 1em;
+  width: 200px;
+  height: 200px;
+  float: left;
 }
 .card .card-body p {
   margin: 10px 0 0;
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    cursor: pointer;
+    color: black;
+    background: black;
+    margin-bottom: 1em;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  .card .card-body p {
+    color: #f23d3d;
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    margin-left: 30px;
+  }
+
+  .cards {
+    margin-left: 20px;
+  }
+}
 .fs-video {
   width: 100%;
 }
@@ -315,6 +313,73 @@ audio {
   float: left;
 }
 
+#flashback {
+  font-family: rajdhani, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #f23d3d;
+  font-size: 35px;
+  float: left;
+  padding: 0;
+}
+
+#fback {
+  font-family: rajdhani, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #f23d3d;
+  font-size: 40px;
+}
+
+.lead {
+  font-family: rajdhani, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 93px;
+  width: 350px;
+  color: #feedd0;
+}
+
+#loginBox {
+  margin-top: 120px;
+  background-color: #2b2925;
+}
+
+@media screen and (max-width: 600px) {
+  #loginBox {
+    margin-left: 0;
+    float: left;
+    margin-top: 150px;
+  }
+
+  .display-4 {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+
+  .lead {
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 350px;
+    color: #feedd0;
+    margin-left: 50px;
+  }
+
+  .form-control {
+    background-color: #feedd0;
+    margin-left: 80px;
+    width: 250px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    border-radius: 30px;
+    color: #f23d3d;
+    margin-left: 80px;
+    width: 200px;
+  }
+}
 @media screen and (min-width: 768px) {
   .user-message {
     font-size: 2.5rem;
@@ -373,6 +438,12 @@ audio {
   }
   .media-type li:last-of-type {
     border-bottom: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Usercontainer {
+    background-image: url(../images/profile_bckgrnd.png);
+    height: 600px;
   }
 }
 
