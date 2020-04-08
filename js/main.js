@@ -1,10 +1,10 @@
-// import the login component first (actually all components here, but we're starting with login)
-import LoginComponent from "./components/LoginComponent.js"
-import UsersComponent from "./components/UsersComponent.js"
+
+import AllUsersComponent from './components/AllUsersComponent.js';
+import LoginComponent from './components/LoginComponent.js';
+import UserHomeComponent from './components/UserHomeComponent.js';
 import ItemComponent from "./components/ItemComponent.js"
-import MoviesComponent from "./components/MoviesComponent.js";
-import TvsComponent from "./components/TvsComponent.js";
-import AudiosComponent from "./components/AudiosComponent.js";
+import VideoComponent from "./components/VideoComponent.js"
+
 
 (() => {
   let router = new VueRouter({
@@ -12,121 +12,68 @@ import AudiosComponent from "./components/AudiosComponent.js";
     routes: [
       { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
-      { path: '/users', name: "users", component: UsersComponent },
-      { path: '/item_menu', name: "item_menu", component: ItemComponent },
-      { path: '/movies', name: "movies", component: MoviesComponent },
-      { path: '/tv', name: "tv", component: TvsComponent },
-      { path: '/audio', name: "audio", component: AudiosComponent }
+      { path: '/users', name: 'users', component: AllUsersComponent },
+      { path: '/item_menu', name: "item_menu", component: ItemComponent, props: true},
+      { path: '/video', name: "video", component: VideoComponent },
+      { path: '/userhome', name: 'home', component: UserHomeComponent, props: true }
     ]
   });
 
   const vm = new Vue({
-
     data: {
-
       authenticated: false,
       administrator: false,
-
-      mockAccount: {
-        username: "user",
-        password: "password"
-      },
-
-      audio: [],
-
-      tv: [],
-
-      movies: [],
-
-      user: []
+      user: [],
 
       //currentUser: {},
     },
 
-    created: function () {
-      // do a localstorage session check and set authenticated to true if the session still exists
-      // if the cached user exists, then just navigate to their user home page
-
-      // the localstorage session will persist until logout
-    },
-
     methods: {
-
-      getMovieData() {
-        // do a fetch call here and get the user from the DB
-        const url = './includes/index.php?getMovie=1';
-  
-        fetch(url) // get data from the DB
-        .then(res => res.json()) // translate JSON to plain object
-        .then(data => { // use the plain data object (the user)
-          console.log(data); // log it to the console (testing)
-  
-          // put our DB data into Vue
-          this.movies.settings = data[0];
-        })
-        .catch((error) => console.error(error))
-      },
-
-      getTvData() {
-        // do a fetch call here and get the user from the DB
-        const url = './includes/index.php?getTv=1';
-  
-        fetch(url) // get data from the DB
-        .then(res => res.json()) // translate JSON to plain object
-        .then(data => { // use the plain data object (the user)
-          console.log(data); // log it to the console (testing)
-  
-          // put our DB data into Vue
-          this.tv.settings = data[0];
-        })
-        .catch((error) => console.error(error))
-      },
-
-      getAudioData() {
-        // do a fetch call here and get the user from the DB
-        const url = './includes/index.php?getAudio=1';
-  
-        fetch(url) // get data from the DB
-        .then(res => res.json()) // translate JSON to plain object
-        .then(data => { // use the plain data object (the user)
-          console.log(data); // log it to the console (testing)
-  
-          // put our DB data into Vue
-          this.audio.settings = data[0];
-        })
-        .catch((error) => console.error(error))
-      },
-
       setAuthenticated(status, data) {
         this.authenticated = status;
-        // handle implicit type coercion (bad, bad part of JS)
-        // turn our admin 1 or 0 back into number
-        this.administrator = parseInt(data.isadmin);
         this.user = data;
       },
 
       logout() {
-        // delete local session
-
         // push user back to login page
-        this.$router.push({ path: "/login" });
+        this.$router.push({ name: "login" });
         this.authenticated = false;
-        this.administrator = false;
+
+        if (localStorage.getItem("cachedUser")){
+          localStorage.removeItem("cachedUser");
+        }
+        if (localStorage.getItem("cachedVideo")){
+          localStorage.removeItem("cachedVideo");
+        }
       }
+    },
+
+    created: function () {
+      // check for a user in localstorage
+      // if we've logged in before, this should be here until we manually remove
+
+      if (localStorage.getItem("cachedUser")) {
+        let user = JSON.parse(localStorage.getItem("cachedUser"));
+
+        this.authenticated = true;
+
+        this.$router.push({ name: "item_menu", params: { currentuser: user } });
+      } else {
+        this.router.push({ name: "login" });
+      }
+
     },
 
     router: router
   }).$mount("#app");
 
-  // add some router security here
-  router.beforeEach((to, from, next) =>{
-    console.log('router guard fired');
-    // if the Vue authenticated property is set to false, then
-    // push the user back to the login screen (cuz they're not logged in)
-    if (vm.authenticated == false){
+  router.beforeEach((to, from, next) => {
+    //console.log('router guard fired!', to, from, vm.authenticated);
+
+    if (vm.authenticated == false) {
       next("/login");
     } else {
       next();
     }
-  })
+  });
 })();
