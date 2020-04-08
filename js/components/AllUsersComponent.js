@@ -4,9 +4,9 @@ import UserComponent from './UserComponent.js';
 
 export default {
 	template: `
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
+	<div class="Usercontainer">
+		<div class="row1">
+			<div class="usersCol">
 				<h1 class="user-message">{{ message }}</h1>
 			</div>
 			<div class="row">

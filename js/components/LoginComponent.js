@@ -12,16 +12,16 @@ export default {
             <div class="form-row align-items-center">
                 <div class="col-md-3 my-1">
                     <label class="sr-only" for="inlineFormInputName">Name</label>
-                    <input class="unamef" v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
+                    <input v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="Username" required>
                 </div>
 
                 <div class="col-md-3 my-1">
                     <label class="sr-only" for="inlineFormPassword">Name</label>
-                    <input v-model="input.password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
+                    <input v-model="input.password" type="password" class="form-control" id="inlineFormPassword" placeholder="Password" required>
                 </div>
 
                 <div class="col-auto my-1">
-                    <button type="submit" class="btn btn-primary">Go!</button>
+                    <button type="submit" id="sign" class="btn btn-primary">SIGN IN</button>
                 </div>
             </div>
         </form>            

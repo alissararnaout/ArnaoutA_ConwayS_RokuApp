@@ -4,3 +4,83 @@
   margin-left: 250px;
     float: left;
 }
+
+#flashback
+{
+	font-family: rajdhani, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	color: #f23d3d;
+	font-size: 35px;
+	float: left;
+	padding: 0;
+}
+
+ #fback
+{
+	font-family: rajdhani, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	color: #f23d3d;
+	font-size: 40px;
+	
+}
+
+.lead
+{
+
+	font-family: rajdhani, sans-serif;
+	font-weight:  400;
+	font-style: normal;
+	margin-left: 93px;
+	width: 350px;
+	color: #feedd0;
+}
+
+#loginBox
+{
+	margin-top: 120px;
+background-color: #2b2925 ;
+}
+
+
+
+@media screen and (max-width: 600px){
+
+  #loginBox {
+    margin-left: 0;
+    float: left;
+    margin-top: 150px;
+}
+
+.display-4{
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.lead{
+  font-family: rajdhani, sans-serif;
+	font-weight:  400;
+	font-style: normal;
+	width: 350px;
+  color: #feedd0;
+  margin-left: 50px;
+
+}
+
+.form-control{
+  background-color: #feedd0;
+  margin-left: 80px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+button{
+  border-radius: 30px;
+  color: #f23d3d;
+  margin-left: 80px;
+  width: 200px;
+}
+
+
+}
