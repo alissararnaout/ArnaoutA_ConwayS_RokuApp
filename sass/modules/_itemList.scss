@@ -1,0 +1,48 @@
+@media screen and (max-width: 600px){
+
+    #hello{
+        color: black;
+        float: left;
+        margin-top: 100px;
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 30px;
+        margin-left: 170px;
+    }
+
+    .row{
+        float: left;
+        margin-left: 10px;
+    }
+
+    .cat{
+        float: left;
+        margin-left: 40px;
+    }
+
+    .catPic{
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+
+    .catTitle{
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+
+    #musicTitle{
+        margin-left: 20px;
+    }
+
+    #tvTitle{
+        margin-left: 35px;
+    }
+}

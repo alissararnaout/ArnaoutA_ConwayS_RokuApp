@@ -8,17 +8,27 @@ export default {
         
             <div class="row">
 
+                <div id="movieCat" class="cat">            
                 <router-link to=/video>
-                <h2>Movies</h2>
+                <img id="moviePic" src="images/movies.png" alt="movies" class="catPic">
+                <h2 class="catTitle">Movies</h2>
                 </router-link>
+                </div>
 
+                <div id="musicCat" class="cat">  
                 <router-link to=/audio>
-                <h2>Music</h2>
+                <img id="musicPic" src="images/tunes.png" alt="Music" class="catPic">
+                <h2 id="musicTitle" class="catTitle">Music</h2>
                 </router-link>
+                </div>
 
+                <div id="tvCat" class="cat"> 
                 <router-link to=/tv>
-                <h2>TV</h2>
+                <img id="tvPic" src="images/shows.png" alt="Tv" class="catPic">
+                <h2 id="tvTitle" class="catTitle">TV</h2>
                 </router-link>
+                </div>
+
                 </div>
   
         </div>
