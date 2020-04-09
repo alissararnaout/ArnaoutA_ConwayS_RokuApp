@@ -10,7 +10,8 @@ export default {
 				<h1 class="user-message">{{ message }}</h1>
 			</div>
 			<div class="row">
-            <user v-for="(user, index) in userList" :liveuser="user" :key="index" />
+			<user v-for="(user, index) in userList" :liveuser="user" :key="index" />
+			<button id="profset">Profile Settings</button>
         </div>
 		</div>
 	</div>
