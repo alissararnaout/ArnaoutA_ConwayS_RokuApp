@@ -44,3 +44,67 @@
     
     
     }
+
+    @media screen and (min-width: 600px) and (max-width: 1000px) {
+
+        .card { 
+            cursor: pointer;  
+            color: black; 
+            background: black;
+            margin-bottom: 1em;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 100px;
+    
+            .card-body p {
+               color: #f23d3d;
+               font-family: rajdhani, sans-serif;
+               font-weight:  400;
+               font-style: normal;
+               position: absolute;
+                z-index: 1;
+                font-size: 40px;
+                margin-left: 30px;
+                }
+        }
+    
+        .cards{
+            margin-left: 170px;
+            
+        }
+
+    }
+
+    @media screen and (min-width: 1000px){
+
+        .card { 
+            cursor: pointer;  
+            color: black; 
+            background: black;
+            margin-bottom: 1em;
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin-left: 50px;
+            margin-top: 100px;
+    
+            .card-body p {
+               color: #f23d3d;
+               font-family: rajdhani, sans-serif;
+               font-weight:  400;
+               font-style: normal;
+               position: absolute;
+                z-index: 1;
+                font-size: 40px;
+                margin-left: 70px;
+                }
+        }
+    
+        .cards{
+            margin-left: 170px;
+            
+        }
+
+    }
