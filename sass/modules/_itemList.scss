@@ -46,3 +46,102 @@
         margin-left: 35px;
     }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    #hello{
+        color: black;
+        float: left;
+        margin-top: 100px;
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 40px;
+        margin-left: 250px;
+    }
+
+    .row{
+        float: left;
+        margin-left: 10px;
+    }
+
+    .cat{
+        float: left;
+        margin-left: 20px;
+    }
+
+    .catPic{
+        width: 200px;
+        height: 200px;
+        float: left;
+    }
+
+    .catTitle{
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    #musicTitle{
+        margin-left: 50px;
+    }
+
+    #tvTitle{
+        margin-left: 80px;
+    }
+
+
+}
+
+@media screen and (min-width: 1000px){
+
+    #hello{
+        color: black;
+        float: left;
+        margin-top: 100px;
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 50px;
+        margin-left: 420px;
+    }
+
+    .row{
+        float: left;
+        margin-left: 70px;
+    }
+
+    .cat{
+        float: left;
+        margin-left: 90px;
+    }
+
+    .catPic{
+        width: 200px;
+        height: 200px;
+        float: left;
+    }
+
+    .catTitle{
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    #musicTitle{
+        margin-left: 50px;
+    }
+
+    #tvTitle{
+        margin-left: 80px;
+    }
+}

@@ -176,6 +176,60 @@ nav:not(.side-nav) ul li {
     margin-left: 20px;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card {
+    cursor: pointer;
+    color: black;
+    background: black;
+    margin-bottom: 1em;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  .card .card-body p {
+    color: #f23d3d;
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    margin-left: 30px;
+  }
+
+  .cards {
+    margin-left: 170px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card {
+    cursor: pointer;
+    color: black;
+    background: black;
+    margin-bottom: 1em;
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+  }
+  .card .card-body p {
+    color: #f23d3d;
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    margin-left: 70px;
+  }
+
+  .cards {
+    margin-left: 170px;
+  }
+}
 .fs-video {
   width: 100%;
 }
@@ -371,67 +425,93 @@ audio {
     width: 200px;
   }
 }
-@media screen and (min-width: 768px) {
-  .user-message {
-    font-size: 2.5rem;
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  #loginBox {
+    margin-left: 0;
+    float: left;
+    margin-top: 150px;
   }
 
-  .media-title {
-    font-size: 1.25em;
+  .display-4 {
+    font-size: 30px;
+    margin-left: 50px;
   }
 
-  .media-year {
-    float: none;
+  .lead {
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 350px;
+    color: #feedd0;
+    margin-left: 50px;
   }
 
-  .media-container:first-of-type {
-    padding-bottom: 0;
+  .form-control {
+    background-color: #feedd0;
+    margin-left: 50px;
   }
 
-  .media-thumb {
-    height: 165px;
-  }
-
-  footer ul {
-    max-width: none;
+  button {
+    border-radius: 30px;
+    color: #f23d3d;
+    width: 100px;
+    margin-left: 50px;
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 1000px) {
+  #loginBox {
+    margin-left: 0;
+    float: left;
+    margin-top: 150px;
+  }
+
   .display-4 {
-    font-size: 35px;
-    text-align: center;
+    font-size: 30px;
+    margin-left: 50px;
+  }
+
+  .lead {
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 350px;
     color: #feedd0;
+    margin-left: 50px;
   }
 
-  .thumb-wrapper {
-    max-height: 350px;
-    overflow-x: auto;
+  .form-control {
+    background-color: #feedd0;
+    margin-left: 50px;
   }
 
-  .media-title {
-    font-size: 1.75em;
+  button {
+    border-radius: 30px;
+    color: #f23d3d;
+    width: 100px;
+    margin-left: 50px;
   }
 
-  .media-type {
-    list-style-type: none;
-    margin-bottom: 0;
-  }
-  .media-type li {
-    padding: 1rem;
-    border-bottom: thin solid #1a1818;
-    cursor: pointer;
-    display: block;
-    width: auto;
-    text-align: left;
-  }
-  .media-type li:hover span:first-of-type {
-    color: #6C3C97;
-  }
-  .media-type li:last-of-type {
-    border-bottom: none;
+  #fback {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 600px) {
+  .Usercontainer {
+    background-image: url(../images/profile_bckgrnd.png);
+    height: 600px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .Usercontainer {
+    background-image: url(../images/profile_bckgrnd.png);
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1000px) {
   .Usercontainer {
     background-image: url(../images/profile_bckgrnd.png);
     height: 600px;
@@ -482,6 +562,100 @@ audio {
 
   #tvTitle {
     margin-left: 35px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  #hello {
+    color: black;
+    float: left;
+    margin-top: 100px;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 40px;
+    margin-left: 250px;
+  }
+
+  .row {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .cat {
+    float: left;
+    margin-left: 20px;
+  }
+
+  .catPic {
+    width: 200px;
+    height: 200px;
+    float: left;
+  }
+
+  .catTitle {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 40px;
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+
+  #musicTitle {
+    margin-left: 50px;
+  }
+
+  #tvTitle {
+    margin-left: 80px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #hello {
+    color: black;
+    float: left;
+    margin-top: 100px;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 50px;
+    margin-left: 420px;
+  }
+
+  .row {
+    float: left;
+    margin-left: 70px;
+  }
+
+  .cat {
+    float: left;
+    margin-left: 90px;
+  }
+
+  .catPic {
+    width: 200px;
+    height: 200px;
+    float: left;
+  }
+
+  .catTitle {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 40px;
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+
+  #musicTitle {
+    margin-left: 50px;
+  }
+
+  #tvTitle {
+    margin-left: 80px;
   }
 }
 
