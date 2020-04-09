@@ -2,8 +2,11 @@
 import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import UserHomeComponent from './components/UserHomeComponent.js';
-import ItemComponent from "./components/ItemComponent.js"
-import VideoComponent from "./components/VideoComponent.js"
+import ItemComponent from "./components/ItemComponent.js";
+import VideoComponent from "./components/VideoComponent.js";
+import TvComponent from "./components/TvComponent.js";
+import AudioComponent from "./components/AudioComponent.js"
+
 
 
 (() => {
@@ -15,6 +18,8 @@ import VideoComponent from "./components/VideoComponent.js"
       { path: '/users', name: 'users', component: AllUsersComponent },
       { path: '/item_menu', name: "item_menu", component: ItemComponent, props: true},
       { path: '/video', name: "video", component: VideoComponent },
+      { path: '/tv', name: "tv", component: TvComponent },
+      { path: '/music', name: "music", component: AudioComponent },
       { path: '/userhome', name: 'home', component: UserHomeComponent, props: true }
     ]
   });
