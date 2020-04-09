@@ -16,7 +16,7 @@ export default {
                 </div>
 
                 <div id="musicCat" class="cat">  
-                <router-link to=/audio>
+                <router-link to=/music>
                 <img id="musicPic" src="images/tunes.png" alt="Music" class="catPic">
                 <h2 id="musicTitle" class="catTitle">Music</h2>
                 </router-link>
