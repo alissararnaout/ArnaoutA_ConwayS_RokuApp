@@ -23,11 +23,6 @@ body {
   margin-top: 10px;
 }
 
-a {
-  color: #00B7FF;
-  text-decoration: none;
-}
-
 .userlist {
   text-align: center;
   font-size: 2rem;
@@ -35,10 +30,6 @@ a {
   font-family: rajdhani, sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-#users {
-  background-color: green;
 }
 
 #header {
@@ -444,6 +435,53 @@ audio {
   .Usercontainer {
     background-image: url(../images/profile_bckgrnd.png);
     height: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #hello {
+    color: black;
+    float: left;
+    margin-top: 100px;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 30px;
+    margin-left: 170px;
+  }
+
+  .row {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .cat {
+    float: left;
+    margin-left: 40px;
+  }
+
+  .catPic {
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+
+  .catTitle {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+
+  #musicTitle {
+    margin-left: 20px;
+  }
+
+  #tvTitle {
+    margin-left: 35px;
   }
 }
 
