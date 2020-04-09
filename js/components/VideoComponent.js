@@ -22,6 +22,11 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="row">
+        <router-link to=/video?filter?Adventure>
+        <h2>Adventure</h2>
+        </router-link>
+        </div>
     </section>
     `,
 
