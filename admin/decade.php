@@ -6,24 +6,20 @@ if (isset($_GET['media'])){
     //echo $tbl;
 }
 
-if (isset($_GET['filter'])) {
+if (isset($_GET['dfilter'])) {
     //Filter
     $args = array(
         'tbl' => $tbl,
-        'tbl2' => 'tbl_genre_m',
-        'tbl3' => 'tbl_mov_genre',
+        'tbl2' => 'tbl_decade_m',
+        'tbl3' => 'tbl_mov_decade',
         'col' => 'movie_id',
-        'col2' => 'genre_m_id',
-        'col3' => 'genre_m_name',
-        'filter' => $_GET['filter']
+        'col2' => 'decade_m_id',
+        'col3' => 'decade_m_name',
+        'dfilter' => $_GET['dfilter']
     );
-    $results = getMoviesByFilter($args);
+    $results = getMoviesByDecade($args);
     echo json_encode($results->fetchAll(PDO::FETCH_ASSOC));
 } else {
     $results = getAll($tbl);
     echo json_encode($results);
 }
-
-
-
-
