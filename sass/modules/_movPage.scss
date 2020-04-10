@@ -10,7 +10,7 @@
         float: left;
         z-index: 1;
         position: absolute;
-        margin-top: 100px;
+        margin-top: 120px;
         width: 100%;
     }
 
@@ -152,6 +152,37 @@
         font-size: 20px;
     }
 
- 
+    #genTop{
+        float: left;
+    }
+
+    .show{
+        display: block;
+    }
+
+    #categories{
+        float: left;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .movie-genres{
+        float: left;
+        z-index: 1;
+
+        li{
+            margin-left: 20px;
+            text-decoration: none;
+            list-style: none;
+        }
+    }
+
+ #genres{
+     display: none;
+ }
+
+ #decades{
+     display: none;
+ }
 
 }
