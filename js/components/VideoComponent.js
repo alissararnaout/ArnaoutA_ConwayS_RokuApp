@@ -2,31 +2,35 @@ export default {
     name: "TheVideoComponent",
 
     template: `
-    <section>
-        <div class="row">
-            <div class="col-12 order-2 order-md-1 col-md-3 media-container">
-                <h4 class="media-title">{{currentMediaDetails.movie_title}}</h4>
-                <p class="media-details" v-html="currentMediaDetails.movie_summary">Storyline here</p>
-                <span class="media-year">{{currentMediaDetails.movie_year}}</span>
-            </div>
+    <section id="movie">
+    <span id="red1"></span>
+        <div id="vidPlayer">
+               
+                    <div class="player">
+                    <video id="vidMov" autoplay controls muted :src="'video/' + currentMediaDetails.movie_video" class="fs-video"></video>
+                    </div>
 
-            <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movie_video" class="fs-video"></video>
-            </div>
+                 <div class="movText">
+                    <h4 id="movTitle">{{currentMediaDetails.movie_title}}</h4>
+                    <span id="movYear">{{currentMediaDetails.movie_year}}</span>
+                    <p id="movSum" v-html="currentMediaDetails.movie_summary">Storyline here</p>
+                    
+         
+                 </div>
+            
         </div>
+        
 
-        <div class="row">
-            <div class="col-12 col-sm-9">
-                <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movie_image" alt="media thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left media-thumb">
+        <div id="movSelect">
+                <div class="movList">
+                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movie_image" alt="media thumb" @click="loadNewMovie(item)" class="media-thumb">
                 </div>
-            </div>
+          
         </div>
-        <div class="row">
-        <router-link to=/video?filter?Adventure>
-        <h2>Adventure</h2>
-        </router-link>
-        </div>
+    <div id="footer">
+        <h2 id="power">Powered by</h2> <img id="rokuimg" class="rokuLogo" src="images/roku.svg" alt="roku" width="50" height="50">
+        <h2 id="copy"> © 2020 Roku FLASHBACK. All Rights Reserved.</h2>
+    </div>
     </section>
     `,
 
