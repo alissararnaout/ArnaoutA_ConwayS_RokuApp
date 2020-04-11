@@ -11,8 +11,8 @@
         float: left;
         z-index: 1;
         position: absolute;
-        margin-top: 120px;
         width: 100%;
+        margin-top: 100px;
     }
 
     #vidMov{
@@ -66,7 +66,6 @@
     #movSelect{
         float: left;
         width: 100%;
-        padding-top: 50px;
         padding-bottom: 50px;
     }
 
@@ -79,6 +78,7 @@
     .movList{
         margin-left: 80px;
         margin-top: 60px;
+        float: left;
     }
 
     #footer{
@@ -160,6 +160,7 @@
         padding: 5px;
         padding-right: 40px;
         color:#feedd0;
+        z-index: 1;
     }
 
     #decTop{
@@ -179,13 +180,11 @@
 
     #categories{
         float: left;
-        position: absolute;
-        z-index: 1;
+        margin-top: 100px;
     }
 
     .movie-genres{
         float: left;
-        z-index: 1;
         position: absolute;
         margin-left: 145px;
         margin-top: 25px;

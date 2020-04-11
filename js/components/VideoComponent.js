@@ -28,16 +28,14 @@ export default {
        
         
 
-        <div id="movSelect">
+        
         <div id="categories">
             <h2 id="browse1">Browse By:</h2>
-                 <button tabindex="0" type="button" id="genTop" @focus="handleFocus1"
-                 @focusout="handleFocusOut1">Genre</button>
+                 <button type="button" id="genTop" @focus="handleFocus1">Genre</button>
             <h2 id="browse2">Browse By:</h2>
-                 <button v-on:click="decList" type="button" id="decTop" @focus="handleFocus2"
-                 @focusout="handleFocusOut2">Decade</button>
+                 <button type="button" id="decTop" @focus="handleFocus2">Decade</button>
 
-                 <ul class="movie-genres" id="genres">
+                 <ul class="movie-genres" id="genres" @focusout="handleFocusOut1">
                  <li>
                      <a href="adventure" @click.prevent="filterMedia('adventure')">Adventure</a>
                  </li>
@@ -87,7 +85,7 @@ export default {
                  </li>
              </ul>
 
-    <ul class="decade-list" id="decades">
+    <ul class="decade-list" id="decades" @focusout="handleFocusOut2">
     <li>
         <a href="fifties" @click.prevent="filterDecade('Fifties')">50s</a>
     </li>
@@ -118,7 +116,7 @@ export default {
  
 </div>
 
-
+<div id="movSelect">
 
                 <div class="movList">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.movie_image" alt="media thumb" @click="loadNewMovie(item)" class="media-thumb">
