@@ -22,6 +22,65 @@ export default{
                  
             
         </div>
+
+        <div id="categories">
+        <h2 id="browse1">Browse By:</h2>
+             <button type="button" id="genTop" @focus="handleFocus1">Genre</button>
+
+             <h2 id="browse2">Browse By:</h2>
+             <button type="button" id="decTop" @focus="handleFocus2">Decade</button>
+
+             <ul class="movie-genres" id="genres" @focusout="handleFocusOut1">
+             <li>
+                 <a href="Rock" @click.prevent="filterMusGenre('Rock')">Rock</a>
+             </li>
+         
+             <li>
+                 <a href="Pop" @click.prevent="filterMusGenre('Pop')">Pop</a>
+             </li>
+         
+             <li>
+                 <a href="Hip-Hop" @click.prevent="filterMusGenre('Hip-Hop')">Hip-Hop</a>
+             </li>
+         
+             <li>
+                 <a href="Vocal" @click.prevent="filterMusGenre('Vocal')">Vocal</a>
+             </li>
+         
+             <li>
+                 <a href="Vocal" @click.prevent="retrieveVideoContent">All</a>
+             </li>
+         </ul>
+
+
+         <ul class="decade-list" id="decades" @focusout="handleFocusOut2">
+         <li>
+             <a href="fifties" @click.prevent="filterMusDecade('Fifties')">50s</a>
+         </li>
+     
+         <li>
+             <a href="Sixties" @click.prevent="filterMusDecade('Sixties')">60s</a>
+         </li>
+     
+         <li>
+             <a href="Seventies" @click.prevent="filterMusDecade('Seventies')">70s</a>
+         </li>
+     
+         <li>
+             <a href="Eighties" @click.prevent="filterMusDecade('Eighties')">80s</a>
+         </li>
+     
+         <li>
+             <a href="Nineties" @click.prevent="filterMusDecade('Nineties')">90s</a>
+         </li>
+     
+         <li>
+             <a href="Nineties" @click.prevent="retrieveVideoContent">All</a>
+         </li>
+     </ul>
+            
+
+        </div>
         
 
         <div id="movSelect">
@@ -50,6 +109,54 @@ created: function(){
 },
 
 methods: {
+
+
+    handleFocus1() {
+        let genres = document.getElementById('genres');
+        genres.style.display = "block";
+    },
+    handleFocusOut1() {
+        let genres = document.getElementById('genres');
+        genres.style.display = "none";
+    },
+
+    handleFocus2() {
+        let decades = document.getElementById('decades');
+        decades.style.display = "block";
+    },
+
+    handleFocusOut2() {
+        let decades = document.getElementById('decades');
+        decades.style.display = "none";
+    },
+
+
+    filterMusGenre(mfilter){
+        //debugger;
+
+        let url = `./admin/musGenre.php?media=music&mfilter=${mfilter}`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                this.allRetrievedVideos = data;
+                this.currentMediaDetails = data[0];
+            })
+    },
+
+    filterMusDecade(mdfilter){
+        //debugger;
+
+        let url = `./admin/musDecade.php?media=music&mdfilter=${mdfilter}`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                this.allRetrievedVideos = data;
+                this.currentMediaDetails = data[0];
+            })
+    },
+
     retrieveVideoContent() {
         // fetch all the video content here (don't care about filtering, genre etc at this point)
         //debugger;
