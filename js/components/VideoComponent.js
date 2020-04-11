@@ -6,8 +6,7 @@ export default {
 
 
     
-    <span id="red1">
-    </span>
+    <span id="red1"></span>
 
 
         <div id="vidPlayer">
@@ -31,9 +30,62 @@ export default {
 
         <div id="movSelect">
         <div id="categories">
-    <button v-on:click="genList" type="button" id="genTop">Genre</button>
-    <div id="work">
-<button v-on:click="decList" type="button" id="decTop">Decade</button>
+            <h2 id="browse1">Browse By:</h2>
+                 <button tabindex="0" type="button" id="genTop" @focus="handleFocus1"
+                 @focusout="handleFocusOut1">Genre</button>
+            <h2 id="browse2">Browse By:</h2>
+                 <button v-on:click="decList" type="button" id="decTop" @focus="handleFocus2"
+                 @focusout="handleFocusOut2">Decade</button>
+
+                 <ul class="movie-genres" id="genres">
+                 <li>
+                     <a href="adventure" @click.prevent="filterMedia('adventure')">Adventure</a>
+                 </li>
+             
+                 <li>
+                     <a href="action" @click.prevent="filterMedia('action')">Action</a>
+                 </li>
+             
+                 <li>
+                     <a href="mystery" @click.prevent="filterMedia('mystery')">Mystery</a>
+                 </li>
+             
+                 <li>
+                     <a href="family" @click.prevent="filterMedia('family')">Family</a>
+                 </li>
+             
+                 <li>
+                     <a href="scfi" @click.prevent="filterMedia('scfi')">SciFi</a>
+                 </li>
+             
+                 <li>
+                     <a href="thriller" @click.prevent="filterMedia('thriller')">Thriller</a>
+                 </li>
+             
+                 <li>
+                     <a href="musical" @click.prevent="filterMedia('musical')">Musical</a>
+                 </li>
+             
+                 <li>
+                     <a href="romance" @click.prevent="filterMedia('romance')">Romance</a>
+                 </li>
+             
+                 <li>
+                     <a href="drama" @click.prevent="filterMedia('drama')">Drama</a>
+                 </li>
+             
+                 <li>
+                     <a href="comedy" @click.prevent="filterMedia('comedy')">Comedy</a>
+                 </li>
+             
+                 <li>
+                     <a href="animation" @click.prevent="filterMedia('animation')">Animation</a>
+                 </li>
+             
+                 <li>
+                     <a href="family" @click.prevent="retrieveVideoContent">All</a>
+                 </li>
+             </ul>
 
     <ul class="decade-list" id="decades">
     <li>
@@ -60,58 +112,10 @@ export default {
         <a href="Nineties" @click.prevent="retrieveVideoContent">All</a>
     </li>
 </ul>
-</div>
+
     
     
-    <ul class="movie-genres" id="genres">
-    <li>
-        <a href="adventure" @click.prevent="filterMedia('adventure')">Adventure</a>
-    </li>
-
-    <li>
-        <a href="action" @click.prevent="filterMedia('action')">Action</a>
-    </li>
-
-    <li>
-        <a href="mystery" @click.prevent="filterMedia('mystery')">Mystery</a>
-    </li>
-
-    <li>
-        <a href="family" @click.prevent="filterMedia('family')">Family</a>
-    </li>
-
-    <li>
-        <a href="scfi" @click.prevent="filterMedia('scfi')">SciFi</a>
-    </li>
-
-    <li>
-        <a href="thriller" @click.prevent="filterMedia('thriller')">Thriller</a>
-    </li>
-
-    <li>
-        <a href="musical" @click.prevent="filterMedia('musical')">Musical</a>
-    </li>
-
-    <li>
-        <a href="romance" @click.prevent="filterMedia('romance')">Romance</a>
-    </li>
-
-    <li>
-        <a href="drama" @click.prevent="filterMedia('drama')">Drama</a>
-    </li>
-
-    <li>
-        <a href="comedy" @click.prevent="filterMedia('comedy')">Comedy</a>
-    </li>
-
-    <li>
-        <a href="animation" @click.prevent="filterMedia('animation')">Animation</a>
-    </li>
-
-    <li>
-        <a href="family" @click.prevent="retrieveVideoContent">All</a>
-    </li>
-</ul>
+ 
 </div>
 
 
@@ -141,15 +145,25 @@ export default {
 
     methods: {
 
-        genList(){
+        handleFocus1() {
             let genres = document.getElementById('genres');
             genres.style.display = "block";
-         },
+        },
+        handleFocusOut1() {
+            let genres = document.getElementById('genres');
+            genres.style.display = "none";
+        },
 
-         decList(){
+        handleFocus2() {
             let decades = document.getElementById('decades');
             decades.style.display = "block";
-         },
+        },
+
+        handleFocusOut2() {
+            let decades = document.getElementById('decades');
+            decades.style.display = "none";
+        },
+
 
 
         filterMedia(filter){
