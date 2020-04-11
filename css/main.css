@@ -923,5 +923,84 @@ audio {
     margin-top: 200px;
   }
 }
+@media screen and (min-width: 1000px) {
+  #childmovie {
+    background-color: #f23d3d;
+    width: 100%;
+    height: 750px;
+    float: left;
+  }
+
+  #cmovTitle {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #feedd0;
+    font-size: 35px;
+  }
+
+  #cmovSelect {
+    margin-top: 600px;
+    float: left;
+    z-index: 1;
+  }
+
+  #cmplayer {
+    width: 800px;
+    height: 400px;
+    float: left;
+  }
+
+  #cmvidMov {
+    width: 800px;
+    height: 400px;
+    float: left;
+    margin-left: 220px;
+  }
+
+  #cmovTitle {
+    margin-left: 500px;
+    margin-top: 50px;
+    float: left;
+  }
+
+  #redspan {
+    width: 100%;
+    height: 50px;
+    float: left;
+    background-color: #f23d3d;
+    position: absolute;
+    margin-top: 950px;
+    z-index: 0;
+  }
+
+  #movList {
+    z-index: 1;
+  }
+
+  #albumc {
+    margin-left: 450px;
+    float: left;
+  }
+
+  #cmmovTitle {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #feedd0;
+    font-size: 20px;
+    float: left;
+    margin-left: 500px;
+    margin-top: 10px;
+  }
+
+  #cmAudioplayer {
+    float: left;
+    margin: 0;
+    position: relative;
+    width: 500px;
+    margin-left: 400px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
