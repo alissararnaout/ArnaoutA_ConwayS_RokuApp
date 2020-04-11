@@ -4,6 +4,7 @@
         height: 400px;
         width: 100%;
         float: left;
+        margin-top: 400px;
         
     }
     #vidPlayer{
@@ -36,7 +37,7 @@
         font-family: rajdhani, sans-serif;
         font-weight: 700;
         font-style: normal;
-        color: #feedd0;
+        color: #013a40;
         font-size: 25px;
         float: left;
     }
@@ -45,11 +46,11 @@
         font-family: rajdhani, sans-serif;
         font-weight: 700;
         font-style: normal;
-        color: #feedd0;
+        color: #013a40;
         font-size: 25px;
         float: left;
         margin-left: 20px;
-        border-left: 1px solid #feedd0;
+        border-left: 1px solid #013a40;
         padding-left: 20px;
     }
 
@@ -58,13 +59,11 @@
         font-family: rajdhani, sans-serif;
         font-weight: 700;
         font-style: normal;
-        color: #013a40;
+        color: #feedd0;
         font-size: 20px;
     }
 
     #movSelect{
-        margin-top: 400px;
-        background-color: #f23d3d;
         float: left;
         width: 100%;
         padding-top: 50px;
@@ -79,6 +78,7 @@
 
     .movList{
         margin-left: 80px;
+        margin-top: 60px;
     }
 
     #footer{
@@ -154,6 +154,23 @@
 
     #genTop{
         float: left;
+        margin: 0;
+        margin-left: 10px;
+        background-color: #013a40;
+        padding: 5px;
+        padding-right: 40px;
+        color:#feedd0;
+    }
+
+    #decTop{
+        float: left;
+        margin: 0;
+        margin-left: 10px;
+        background-color: #013a40;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 40px;
+        color:#feedd0;
     }
 
     .show{
@@ -169,20 +186,86 @@
     .movie-genres{
         float: left;
         z-index: 1;
+        position: absolute;
+        margin-left: 145px;
+        margin-top: 25px;
+        background-color: #013a40;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 10px;
+        color:#feedd0;
+
 
         li{
-            margin-left: 20px;
+            
             text-decoration: none;
             list-style: none;
+            font-family: rajdhani, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: #feedd0;
+            font-size: 20px;
         }
+    }
+
+    .decade-list{
+        float: left;
+        z-index: 1;
+        position: absolute;
+        margin-left: 390px;
+        margin-top: 25px;
+        background-color: #013a40;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 10px;
+        color:#feedd0;
+        width: 100px;
+
+
+        li{
+            
+            text-decoration: none;
+            list-style: none;
+            font-family: rajdhani, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: #feedd0;
+            font-size: 20px;
+        }
+
     }
 
  #genres{
      display: none;
+     float: left;
  }
 
  #decades{
      display: none;
+    
+     float: left;
  }
+
+ #browse1{
+        float: left;
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #013a40;
+        font-size: 20px;
+        margin-left: 40px;
+ }
+
+ #browse2{
+    float: left;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #013a40;
+    font-size: 20px;
+    margin-left: 40px;
+}
 
 }

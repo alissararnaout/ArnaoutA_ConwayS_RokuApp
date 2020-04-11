@@ -7,7 +7,6 @@ export default {
             <div class="card-body">
             <img :src="'images/' + liveuser.avatar" class="rounded-circle img-fluid">
                 <p>{{ liveuser.fname }}</p>
-                <p>{{ liveuser.admin }}</p>
             </div>
         </div>
 
