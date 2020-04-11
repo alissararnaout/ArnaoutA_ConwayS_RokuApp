@@ -11,7 +11,11 @@ export default {
 			</div>
 			<div class="row">
 			<user v-for="(user, index) in userList" :liveuser="user" :key="index" />
-			<button id="profset">Profile Settings</button>
+
+			
+			
+			
+
         </div>
 		</div>
 	</div>
@@ -24,7 +28,7 @@ export default {
 	data() {
 		return {
 			message: `Who's Using Roku?`,
-			userList: []
+			userList: [],
 		}
 	},
 
@@ -37,6 +41,7 @@ export default {
 			.then(data => this.userList = data)
 			.catch((error) => console.log.error(error))
 		}
+
 	},
 
 	components: {

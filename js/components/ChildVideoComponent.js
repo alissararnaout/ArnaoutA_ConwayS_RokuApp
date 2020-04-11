@@ -1,10 +1,11 @@
 export default {
-    name: "TheVideoComponent",
-
+    name: "TheChildVideoComponent",
 
     template: `
     <section id="movie">
 
+
+    
     <span id="red1"></span>
 
 
@@ -166,7 +167,7 @@ export default {
         filterMedia(filter){
             //debugger;
 
-            let url = `./admin/index.php?media=movies&filter=${filter}`;
+            let url = `./admin/movGenreC.php?movies=true&filter=${filter}`;
 
             fetch(url)
                 .then(res => res.json())
@@ -179,7 +180,7 @@ export default {
         filterDecade(dfilter){
             //debugger;
 
-            let url = `./admin/decade.php?media=movies&dfilter=${dfilter}`;
+            let url = `./admin/movDecadeC.php?movies=true&dfilter=${dfilter}`;
 
             fetch(url)
                 .then(res => res.json())
@@ -188,7 +189,6 @@ export default {
                     this.currentMediaDetails = data[0];
                 })
         },
-
 
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
@@ -200,7 +200,7 @@ export default {
                 this.currentMediaDetails = this.allRetrievedVideos[0];
 
             } else {
-                let url = `./admin/index.php?media=movies&permissions=5`;
+                let url = `./admin/movGenreC.php?movies=true`;
 
                 fetch(url)
                 .then(res => res.json())
@@ -213,6 +213,11 @@ export default {
     
                 
             }
+
+        
+    
+                
+           
 
            
         },

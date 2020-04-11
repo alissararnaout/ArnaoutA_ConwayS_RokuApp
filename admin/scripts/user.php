@@ -81,6 +81,20 @@ function getAllUsers(){
 
 }
 
+function userPerm(){
+    $pdo = Database::getInstance()->getConnection();
+
+    $get_perm_query = 'SELECT user_permissions FROM tbl_user';
+    $get_perm_set = $pdo->prepare($get_perm_query);
+    $get_perm_result = $get_perm_set->execute();
+
+if($get_perm_result){
+    return json_encode($get_perm_result);
+} else {
+    return 'There was a problem getting the users';
+}
+}
+
 function editUser($id, $fname, $username, $password, $email){
     //TODO: set up database connection
     $pdo = Database::getInstance()->getConnection();
