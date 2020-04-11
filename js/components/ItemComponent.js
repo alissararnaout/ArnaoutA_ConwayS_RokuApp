@@ -2,18 +2,22 @@
 
 export default {
     props: ['currentuser'],
+   
     template: `
+
         <div class="container">
         <h1 id="hello">Hello, {{ currentuser.fname }}</h1>
         
             <div class="row">
 
+        
                 <div id="movieCat" class="cat">            
                 <router-link to=/video>
                 <img id="moviePic" src="images/movies.png" alt="movies" class="catPic">
                 <h2 class="catTitle">Movies</h2>
                 </router-link>
                 </div>
+               
 
                 <div id="musicCat" class="cat">  
                 <router-link to=/music>
@@ -30,8 +34,11 @@ export default {
                 </div>
 
                 </div>
-  
+                <router-link to=/settings>
+                <button id="profset">Profile Settings</button>
+                </router-link>
         </div>
     `
+
 
 }

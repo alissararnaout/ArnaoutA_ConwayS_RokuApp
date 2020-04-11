@@ -3,9 +3,13 @@ import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import ItemComponent from "./components/ItemComponent.js";
 import VideoComponent from "./components/VideoComponent.js";
+import ChildVideoComponent from "./components/ChildVideoComponent.js";
+import ChildTvComponent from "./components/ChildTVComponent.js";
+import ChildMusicComponent from "./components/ChildMusicComponent.js";
 import TvComponent from "./components/TvComponent.js";
 import AudioComponent from "./components/AudioComponent.js";
 import ChildItemComponent from "./components/ChildItemComponent.js";
+import SettingsComponent from "./components/SettingsComponent.js";
 
 
 
@@ -15,12 +19,16 @@ import ChildItemComponent from "./components/ChildItemComponent.js";
     routes: [
       { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
-      { path: '/users', name: 'users', component: AllUsersComponent },
+      { path: '/users', name: 'users', component: AllUsersComponent, props: true},
       { path: '/item_menu', name: "item_menu", component: ItemComponent, props: true},
       { path: '/child_menu', name: "child_menu", component: ChildItemComponent, props: true},
+      { path: '/child_video', name: "child_video", component: ChildVideoComponent },
+      { path: '/child_music', name: "child_music", component: ChildMusicComponent },
+      { path: '/child_tv', name: "child_tv", component: ChildTvComponent },
       { path: '/video', name: "video", component: VideoComponent },
       { path: '/tv', name: "tv", component: TvComponent },
-      { path: '/music', name: "music", component: AudioComponent }
+      { path: '/music', name: "music", component: AudioComponent },
+      { path: '/settings', name: "settings", component: SettingsComponent }
     ]
   });
 

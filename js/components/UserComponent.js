@@ -1,5 +1,5 @@
 export default {
-    props: ['liveuser'],
+    props: ['liveuser'], 
 
     template: `
     <div class="cards">
@@ -26,8 +26,8 @@ export default {
 
             if(this.liveuser.admin == 1){
             // send this user to its home page, and pass the user object to the home page
-            this.$router.push({ name: "item_menu", params: { currentuser: this.liveuser }})
-            } else {
+            this.$router.push({ name: "item_menu", params: { currentuser: this.liveuser }});
+           } else {
                 this.$router.push({ name: "child_menu", params: { currentuser: this.liveuser }})
             }
 

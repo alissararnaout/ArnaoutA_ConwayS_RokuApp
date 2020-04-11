@@ -1,16 +1,15 @@
 <?php
 require_once '../load.php';
 
-if (isset($_GET['media'])){
-    $tbl = "tbl_" . trim($_GET["media"]);
+if (isset($_GET['movies'])){
+    $results = getAllMoviesChild();
     //echo $tbl;
 }
-
 
 if (isset($_GET['filter'])) {
     //Filter
     $args = array(
-        'tbl' => $tbl,
+        'tbl' => 'tbl_movies',
         'tbl2' => 'tbl_genre_m',
         'tbl3' => 'tbl_mov_genre',
         'col' => 'movie_id',
@@ -21,10 +20,6 @@ if (isset($_GET['filter'])) {
     $results = getMoviesByFilter($args);
     echo json_encode($results->fetchAll(PDO::FETCH_ASSOC));
 } else {
-    $results = getAll($tbl);
+    $results = getAllMoviesChild();
     echo json_encode($results);
 }
-
-
-
-
