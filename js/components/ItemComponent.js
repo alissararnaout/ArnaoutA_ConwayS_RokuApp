@@ -6,6 +6,86 @@ export default {
     template: `
 
         <div class="container">
+
+
+        <div id="settings">
+        <p id="x" @click="close">X</p2>
+
+        <h2 id="edit">Edit Profiles</h2>
+
+        <div id="parentProf">
+        <img id="parImg" src="images/parent.png" alt="parent" width="150" height="150">
+        <h2 id="label">Parent</h2>
+        <h2 id="contFil">Content Filter</h2>
+        <button type="button" id="agRate" @focus="handleFocus1">Age-Rating</button>
+        <ul class="decade-list" id="ageRes" @focusout="handleFocusOut1">
+        <li>
+            <a href="">G</a>
+        </li>
+    
+        <li>
+            <a href="">PG</a>
+        </li>
+    
+        <li>
+            <a href="">PG-13</a>
+        </li>
+    
+        <li>
+            <a href="">M</a>
+        </li>
+    
+        <li>
+            <a hre="">R</a>
+        </li>
+    
+        <li>
+            <a href="">All</a>
+        </li>
+    </ul>
+        </div>
+
+
+
+        <div id="childProf">
+        <img id="parImg" src="images/child.png" alt="parent" width="150" height="150">
+        <h2 id="label">Child</h2>
+        <h2 id="contFil">Content Filter</h2>
+        <button type="button" id="agRate" @focus="handleFocus2">Age-Rating</button>
+        <ul class="decade-list" id="cageRes" @focusout="handleFocusOut2">
+        <li>
+            <a href="">G</a>
+        </li>
+    
+        <li>
+            <a href="">PG</a>
+        </li>
+    
+        <li>
+            <a href="">PG-13</a>
+        </li>
+    
+        <li>
+            <a href="">M</a>
+        </li>
+    
+        <li>
+            <a hre="">R</a>
+        </li>
+    
+        <li>
+            <a href="">All</a>
+        </li>
+    </ul>
+        </div>
+
+
+
+        </div>
+
+
+
+
         <h1 id="hello">Hello, {{ currentuser.fname }}</h1>
         
             <div class="row">
@@ -34,11 +114,42 @@ export default {
                 </div>
 
                 </div>
-                <router-link to=/settings>
-                <button id="profset">Profile Settings</button>
-                </router-link>
+
+                <button @click="navToSet()" id="profset">Profile Settings</button>
+               
         </div>
-    `
+    `,
+
+    methods:{
+        navToSet(){
+            let settings = document.getElementById('settings');
+            settings.style.display = "block";
+        },
+
+        close(){
+            let settings = document.getElementById('settings');
+            settings.style.display = "none";
+        },
+
+        handleFocus1() {
+            let age = document.getElementById('ageRes');
+            age.style.display = "block";
+        },
+        handleFocusOut1() {
+            let age2 = document.getElementById('ageRes');
+            age2.style.display = "none";
+        },
+
+        handleFocus2() {
+            let age2 = document.getElementById('cageRes');
+            age2.style.display = "block";
+        },
+        handleFocusOut2() {
+            let age2 = document.getElementById('cageRes');
+            age2.style.display = "none";
+        },
+
+    }
 
 
 }

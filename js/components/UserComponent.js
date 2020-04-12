@@ -3,10 +3,10 @@ export default {
 
     template: `
     <div class="cards">
-        <div class="card" @click="navToItems()">
+        <div @click="navToItems()">
             <div class="card-body">
-            <img :src="'images/' + liveuser.avatar" class="rounded-circle img-fluid">
-                <p>{{ liveuser.fname }}</p>
+            <img :src="'images/' + liveuser.avatar" class="rounded-circle img-fluid" width="300" height="300">
+                <p class="unames">{{ liveuser.fname }}</p>
             </div>
         </div>
 

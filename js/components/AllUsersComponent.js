@@ -6,14 +6,15 @@ export default {
 	template: `
 	<div class="Usercontainer">
 		<div class="row1">
-			<div class="usersCol">
-				<h1 class="user-message">{{ message }}</h1>
-			</div>
+
+			
 			<div class="row">
 			<user v-for="(user, index) in userList" :liveuser="user" :key="index" />
 
 			
+
 			
+
 			
 
         </div>
@@ -27,7 +28,7 @@ export default {
 
 	data() {
 		return {
-			message: `Who's Using Roku?`,
+
 			userList: [],
 		}
 	},
@@ -40,11 +41,14 @@ export default {
 			.then(res => res.json())
 			.then(data => this.userList = data)
 			.catch((error) => console.log.error(error))
-		}
+		},
 
-	},
+    
+	
+},
 
-	components: {
-		user: UserComponent
-	}
+
+components: {
+	user: UserComponent
+}
 }

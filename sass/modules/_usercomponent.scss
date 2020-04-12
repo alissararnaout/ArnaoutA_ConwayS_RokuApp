@@ -1,77 +1,57 @@
-.user-message { margin: 0.25em 0 1em; }
 
-.card { 
-    cursor: pointer;  
-    color: black; 
-    background: #feedd0;
-    margin-bottom: 1em;
-    width: 200px;
-    height: 200px;
-    float: left;
 
-    .card-body p { margin: 10px 0 0; }
-}
+
+
+
+
 
 @media screen and (max-width: 600px){
 
-    .card { 
-        cursor: pointer;  
-        color: black; 
-        background: black;
-        margin-bottom: 1em;
-        width: 200px;
-        height: 200px;
-        float: left;
-        margin-left: 20px;
-        margin-top: 100px;
 
-        .card-body p {
-           color: #f23d3d;
-           font-family: rajdhani, sans-serif;
-           font-weight:  400;
-           font-style: normal;
-           position: absolute;
-            z-index: 1;
-            font-size: 40px;
-            margin-left: 30px;
-            }
-    }
+    .unames {
+        color: #f23d3d;
+        font-family: rajdhani, sans-serif;
+        font-weight:  400;
+        font-style: normal;
+        position: absolute;
+         z-index: 1;
+         font-size: 20px;
+         margin-left: 30px;
+         }
 
     .cards{
         margin-left: 20px;
+        margin-top: 50px;
         
     }
+
     
     
     }
 
     @media screen and (min-width: 600px) and (max-width: 1000px) {
 
-        .card { 
-            cursor: pointer;  
-            color: black; 
-            background: black;
-            margin-bottom: 1em;
-            width: 200px;
-            height: 200px;
-            float: left;
-            margin-left: 20px;
-            margin-top: 100px;
+       
+     
     
-            .card-body p {
-               color: #f23d3d;
-               font-family: rajdhani, sans-serif;
-               font-weight:  400;
-               font-style: normal;
-               position: absolute;
-                z-index: 1;
-                font-size: 40px;
-                margin-left: 30px;
-                }
-        }
+        .unames {
+            color: #f23d3d;
+            font-family: rajdhani, sans-serif;
+            font-weight:  400;
+            font-style: normal;
+            position: absolute;
+             z-index: 1;
+             font-size: 20px;
+             margin-left: 30px;
+             }
+
+        
     
         .cards{
             margin-left: 170px;
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
             
         }
 
@@ -79,32 +59,43 @@
 
     @media screen and (min-width: 1000px){
 
-        .card { 
-            cursor: pointer;  
-            color: black; 
-            background: black;
-            margin-bottom: 1em;
-            width: 300px;
-            height: 300px;
-            float: left;
-            margin-left: 50px;
-            margin-top: 100px;
+      
     
-            .card-body p {
-               color: #f23d3d;
-               font-family: rajdhani, sans-serif;
-               font-weight:  400;
-               font-style: normal;
-               position: absolute;
-                z-index: 1;
-                font-size: 40px;
-                margin-left: 70px;
-                }
-        }
-    
+        .unames {
+            color: #f23d3d;
+            font-family: rajdhani, sans-serif;
+            font-weight:  400;
+            font-style: normal;
+            position: absolute;
+             z-index: 1;
+             font-size: 40px;
+             margin-left: 80px;
+             }
+
         .cards{
-            margin-left: 170px;
+            margin-left: 150px;
+            margin-top: 100px;
+           
             
         }
+
+
+#profset{
+	border-radius: 7px;
+	padding: 5px;
+	border: 2px #f23d3d;
+	background-color: #f23d3d;
+	color: #feedd0;
+	font-family: rajdhani, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 450px;
+	margin-top: 30px;
+	width: 200px;
+	
+}
 
     }
