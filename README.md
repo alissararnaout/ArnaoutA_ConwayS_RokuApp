@@ -1,8 +1,7 @@
 # RokuApp
 
-# Roku App Project
-
 This is a soon-to-be responsive video and audio streaming application.
+
 
 ## Getting Started
 
@@ -41,16 +40,16 @@ Then make the site live with localhost
 
 ## Authors
 
-* **Sarah Conway** - *Initial work* - (https://github.com/sarahconway69704)
-* **Alissar Arnaout** - *Initial work* - (https://github.com/alissararnaout)
+* **Sarah Conway** - Development
+* **Alissar Arnaout** - Design
 
 
 ## Acknowledgments
 
-* Trevor.
+* Trevor
 * Adobe Fonts
 
-## Liscence
+## License
 
 MIT
 
