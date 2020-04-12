@@ -9,7 +9,9 @@ import ChildMusicComponent from "./components/ChildMusicComponent.js";
 import TvComponent from "./components/TvComponent.js";
 import AudioComponent from "./components/AudioComponent.js";
 import ChildItemComponent from "./components/ChildItemComponent.js";
-import SettingsComponent from "./components/SettingsComponent.js";
+
+
+
 
 
 
@@ -28,7 +30,7 @@ import SettingsComponent from "./components/SettingsComponent.js";
       { path: '/video', name: "video", component: VideoComponent },
       { path: '/tv', name: "tv", component: TvComponent },
       { path: '/music', name: "music", component: AudioComponent },
-      { path: '/settings', name: "settings", component: SettingsComponent }
+
     ]
   });
 

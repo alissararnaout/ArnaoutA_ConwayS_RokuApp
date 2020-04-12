@@ -51,21 +51,6 @@ header span {
   top: 5px;
 }
 
-#profset {
-  border-radius: 7px;
-  padding: 5px;
-  border: 2px #f23d3d;
-  background-color: #f23d3d;
-  color: #feedd0;
-  font-family: rajdhani, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 490px;
-}
-
 nav:not(.side-nav) ul {
   right: 3em;
   list-style-type: none;
@@ -111,15 +96,6 @@ nav:not(.side-nav) ul li {
   color: #feedd0;
 }
 
-.user-message {
-  text-align: center;
-  font-size: 2rem;
-  color: #2b2925;
-  font-family: rajdhani, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 #mov_genres {
   margin-top: 30px;
   float: left;
@@ -132,90 +108,44 @@ nav:not(.side-nav) ul li {
   float: left;
 }
 
-.user-message {
-  margin: 0.25em 0 1em;
-}
-
-.card {
-  cursor: pointer;
-  color: black;
-  background: #feedd0;
-  margin-bottom: 1em;
-  width: 200px;
-  height: 200px;
-  float: left;
-}
-.card .card-body p {
-  margin: 10px 0 0;
-}
-
 @media screen and (max-width: 600px) {
-  .card {
-    cursor: pointer;
-    color: black;
-    background: black;
-    margin-bottom: 1em;
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin-left: 20px;
-    margin-top: 100px;
-  }
-  .card .card-body p {
+  .unames {
     color: #f23d3d;
     font-family: rajdhani, sans-serif;
     font-weight: 400;
     font-style: normal;
     position: absolute;
     z-index: 1;
-    font-size: 40px;
+    font-size: 20px;
     margin-left: 30px;
   }
 
   .cards {
     margin-left: 20px;
+    margin-top: 50px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1000px) {
-  .card {
-    cursor: pointer;
-    color: black;
-    background: black;
-    margin-bottom: 1em;
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin-left: 20px;
-    margin-top: 100px;
-  }
-  .card .card-body p {
+  .unames {
     color: #f23d3d;
     font-family: rajdhani, sans-serif;
     font-weight: 400;
     font-style: normal;
     position: absolute;
     z-index: 1;
-    font-size: 40px;
+    font-size: 20px;
     margin-left: 30px;
   }
 
   .cards {
     margin-left: 170px;
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .card {
-    cursor: pointer;
-    color: black;
-    background: black;
-    margin-bottom: 1em;
-    width: 300px;
-    height: 300px;
-    float: left;
-    margin-left: 50px;
-    margin-top: 100px;
-  }
-  .card .card-body p {
+  .unames {
     color: #f23d3d;
     font-family: rajdhani, sans-serif;
     font-weight: 400;
@@ -223,11 +153,29 @@ nav:not(.side-nav) ul li {
     position: absolute;
     z-index: 1;
     font-size: 40px;
-    margin-left: 70px;
+    margin-left: 80px;
   }
 
   .cards {
-    margin-left: 170px;
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+
+  #profset {
+    border-radius: 7px;
+    padding: 5px;
+    border: 2px #f23d3d;
+    background-color: #f23d3d;
+    color: #feedd0;
+    font-family: rajdhani, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 450px;
+    margin-top: 30px;
+    width: 200px;
   }
 }
 .fs-video {
@@ -919,8 +867,128 @@ audio {
   }
 }
 @media screen and (min-width: 1000px) {
-  .Setcontainer {
-    margin-top: 200px;
+  #settings {
+    width: 100%;
+    background-image: url(../images/profile_bckgrnd.png);
+    height: 500px;
+    z-index: 1;
+    position: absolute;
+    display: none;
+    margin-top: 100px;
+    float: left;
+  }
+
+  #x {
+    color: #f23d3d;
+    font-size: 20px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  #edit {
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f23d3d;
+    font-size: 25px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+  }
+
+  #parentProf {
+    float: left;
+    width: 400px;
+  }
+
+  #parImg {
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+
+  #label {
+    float: left;
+    margin-top: 80px;
+    margin-left: 170px;
+    color: #84b3ad;
+    background-color: #feedd0;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    position: absolute;
+  }
+
+  #contFil {
+    font-size: 20px;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #feedd0;
+    margin-top: 180px;
+    margin-left: 180px;
+    width: 200px;
+    float: left;
+    position: absolute;
+  }
+
+  #agRate {
+    float: left;
+    font-size: 20px;
+    font-family: rajdhani, sans-serif;
+    font-weight: 700;
+    background-color: #84b3ad;
+    font-size: 20px;
+    color: #feedd0;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    margin-left: 0;
+    margin-top: 220px;
+    position: absolute;
+  }
+
+  #ageRes {
+    float: left;
+    margin: 0;
+    background-color: #84b3ad;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #feedd0;
+    z-index: 1;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 180px;
+    display: none;
+  }
+
+  #cageRes {
+    float: left;
+    margin: 0;
+    background-color: #84b3ad;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #feedd0;
+    z-index: 1;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 180px;
+    display: none;
+  }
+
+  #childProf {
+    float: left;
+    margin-left: 10px;
+    position: relative;
   }
 }
 @media screen and (min-width: 1000px) {
