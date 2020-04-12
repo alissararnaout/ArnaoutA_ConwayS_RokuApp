@@ -84,7 +84,7 @@ export default {
         </div>
 
 
-
+<div id="menu">
 
         <h1 id="hello">Hello, {{ currentuser.fname }}</h1>
         
@@ -116,7 +116,7 @@ export default {
                 </div>
 
                 <button @click="navToSet()" id="profset">Profile Settings</button>
-               
+               </div>
         </div>
     `,
 

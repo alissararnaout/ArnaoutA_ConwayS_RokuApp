@@ -11,12 +11,6 @@ export default {
 			<div class="row">
 			<user v-for="(user, index) in userList" :liveuser="user" :key="index" />
 
-			
-
-			
-
-			
-
         </div>
 		</div>
 	</div>
