@@ -99,8 +99,19 @@
 
 @media screen and (min-width: 1000px){
 
+    #hello1{
+        float: left;
+        margin-top: 100px;
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #feedd0;
+        font-size: 50px;
+        margin-left: 420px;
+    }
+
+
     #hello{
-        color: black;
         float: left;
         margin-top: 100px;
         font-family: rajdhani, sans-serif;
@@ -109,6 +120,15 @@
         color: #f23d3d;
         font-size: 50px;
         margin-left: 420px;
+    }
+    .catTitle{
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #f23d3d;
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 50px;
     }
 
     .row{
@@ -127,11 +147,21 @@
         float: left;
     }
 
+    .catTitle1{
+        font-family: rajdhani, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #feedd0;
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
     .catTitle{
         font-family: rajdhani, sans-serif;
         font-weight: 700;
         font-style: normal;
-        color: #f23d3d;
+        color: #f23d3d ;
         font-size: 40px;
         margin-left: 40px;
         margin-top: 50px;
@@ -144,4 +174,13 @@
     #tvTitle{
         margin-left: 80px;
     }
+
+    .Ccontainer{
+        background-color: #f23d3d;
+        width: 100%;
+        height: 1000px;
+        float: left;
+    }
+
+   
 }
