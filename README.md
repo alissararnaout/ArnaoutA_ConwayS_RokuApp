@@ -1,4 +1,4 @@
-# RokuApp
+# Roku Flashback App
 
 This is a soon-to-be responsive video and audio streaming application.
 
